@@ -1,8 +1,8 @@
 <h3>Orbit Report</h3>
 <table>
    <tr class="header-row">
-      <th class="sortable">Name</th>
-      <th class="sortable">Type</th>
+      <th (click)="sort('name')" class="sortable">Name</th>
+      <th (click)="sort('type')" class="sortable">Type</th>
       <th>Operational</th>
       <th>Orbit Type</th>
       <th>Launch Date</th>
@@ -10,7 +10,7 @@
    <!-- TODO: put <tr *ngFor=""></tr> here -->
    <tr *ngFor="let object of satellites">
        <td>{{object.name}}</td>
-       <td>{{object.type}}</td>
+       <td [class.warning]="object.shouldShowWarning()">{{object.type}}</td>
        <td>{{object.operational}}</td>
        <td>{{object.orbitType}}</td>
        <td>{{object.launchDate}}</td>
