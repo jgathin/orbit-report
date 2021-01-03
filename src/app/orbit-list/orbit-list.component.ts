@@ -19,7 +19,7 @@ export class OrbitListComponent implements OnInit {
 
   sort(column: string): void {
    
-    this.satellites!.sort(function(a: Satellite, b: Satellite): number {
+    this.satellites!.sort(function(a: Satellite, b: Satellite): string {
        if(a[column] < b[column]) {
           return -1;
        } else if (a[column] > b[column]) {
