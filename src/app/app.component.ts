@@ -28,7 +28,7 @@ export class AppComponent {
         this.displayList = this.sourceList.slice(0);
         
       }.bind(this));
-    }.bind(this));
+    }.bind(this)); 
 
   }
 
